@@ -1,3 +1,4 @@
 /test-results/
 /playwright-reports/
 .DS_Store
+/node_modules/
