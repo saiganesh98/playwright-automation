@@ -17,5 +17,4 @@ test('Search for a product, select it, and perform checkout', async ({ page }) =
 
   // Select a product from the search results
   const newPage = await productListPage.selectProduct();
-
 });
