@@ -1,0 +1,8 @@
+{
+    "baseUrl": "https://example.com",
+    "browser": "chromium",
+    "viewportWidth": 2560,
+    "viewportHeight": 1600,
+    "timeout": 30000,
+    "wait": 10000
+  }
