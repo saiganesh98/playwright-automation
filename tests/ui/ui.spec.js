@@ -1,5 +1,5 @@
 const { test, expect } = require('@playwright/test');
-const { ExamplePage } = require('../../pages/examplePage.js');
+const { ExamplePage } = require('../../pages/ExamplePage');
 const config = require('../../utils/configReader.js');
 
 test('verify example heading text', async ({ browser }) => {
