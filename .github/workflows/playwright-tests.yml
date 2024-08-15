@@ -49,7 +49,7 @@ jobs:
     - name: Run Playwright tests
       run: npx playwright test
  
-     - name: Upload Playwright reports
+    - name: Upload Playwright reports
       uses: actions/upload-artifact@v3
       with:
         name: playwright-reports
