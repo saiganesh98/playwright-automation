@@ -1,7 +1,7 @@
-const { test, expect, devices } = require('@playwright/test');
+const { test, expect, devices} = require('@playwright/test');
 
-test('should perform mobile actions', async ({ page }) => {
-  // Define a device to emulate
+test('should perform mobile actions', async ({browser}) => {
+    // Define a device to emulate
   const iPhone = devices['iPhone 12'];
 
   // Create a browser context with mobile emulation
@@ -22,6 +22,7 @@ test('should perform mobile actions', async ({ page }) => {
   // Verify results
   await expect(mobilePage).toHaveTitle(/Example Domain/);
 
+  await mobilePage.waitForTimeout(5000);
   // Close the context and page
   await context.close();
 });

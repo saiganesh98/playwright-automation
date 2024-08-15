@@ -16,9 +16,8 @@ module.exports = {
       { name: config.browser, use: { browserName: config.browser } },
     ],
     reporter: [
-        ['list'],
         ['html', { outputFolder: reportFolder }], // Separate folder for HTML report
-        ['json', { outputFolder: 'playwright-reports/json' }] 
+        // ['json', { outputFolder: 'playwright-reports/json' }] 
       ],
   };
 
