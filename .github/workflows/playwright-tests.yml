@@ -29,7 +29,4 @@ jobs:
 
     - name: Run Playwright tests
       run: npx playwright test
-      env:
-        # Specify any environment variables if needed
-        # For example:
-        # BASE_URL: ${{ secrets.BASE_URL }}
+ 
