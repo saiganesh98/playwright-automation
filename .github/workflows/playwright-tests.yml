@@ -3,14 +3,14 @@ name: Run Playwright Tests
 on:
   push:
     branches:
-      - main  # or the branch you want to trigger the pipeline on
+      - main
   pull_request:
     branches:
-      - main  # or the branch you want to trigger the pipeline on
+      - main
 
 jobs:
   test:
-    runs-on: ubuntu-latest  # You can also use windows-latest or macos-latest if needed
+    runs-on: ubuntu-latest  # Specify the operating system for the runner
 
     steps:
     - name: Checkout code
@@ -19,14 +19,17 @@ jobs:
     - name: Set up Node.js
       uses: actions/setup-node@v3
       with:
-        node-version: '18'  # Specify the Node.js version you are using
+        node-version: '18'  # Specify the Node.js version
 
     - name: Install dependencies
       run: npm install
 
+    - name: Install Playwright browsers
+      run: npx playwright install --with-deps
+
     - name: Run Playwright tests
       run: npx playwright test
       env:
-        # If you have environment variables, add them here
+        # Specify any environment variables if needed
         # For example:
         # BASE_URL: ${{ secrets.BASE_URL }}
