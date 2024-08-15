@@ -7,7 +7,7 @@ const reportFolder = path.join('playwright-reports', `html-report-${timestamp}`)
 
 module.exports = {
     use: {
-      headless: false,
+      headless: true,
       viewport: { width: config.viewportWidth, height: config.viewportHeight }, // MacBook M1 resolution
       screenshot: 'only-on-failure',
       video: 'retain-on-failure',
